@@ -4,7 +4,7 @@
 In the virtual cycling environment, cycling can be done even without a cycling machine.
 In hardware level, the virtual cycling environment can be transformed by exoskeleton.
 
-#Features
+# Features
 --------
 
 - A human dynamics model, exoskeleton dynamics model, as well as a bicycle dynamcis model is created. 
@@ -15,7 +15,7 @@ In hardware level, the virtual cycling environment can be transformed by exoskel
 For more detail of how these model be created, please look at the Wiki of this project.
 
 
-#Dependencies
+# Dependencies
 ===========
 - numpy  >= 1.14.3     
 - pydy  >= 0.4.0
