@@ -1,11 +1,10 @@
 # Introduction
-----------
+
 ''Virtual-Cycling-Simulator'' is a project to simulate virtual cycling environment. 
 In the virtual cycling environment, cycling can be done even without a cycling machine.
 In hardware level, the virtual cycling environment can be transformed by exoskeleton.
 
 # Features
---------
 
 - A human dynamics model, exoskeleton dynamics model, as well as a bicycle dynamcis model is created. 
 - human model and exoskeleton model are created and wrote in C code verison using ''SymPy'' and ''Pydy''
