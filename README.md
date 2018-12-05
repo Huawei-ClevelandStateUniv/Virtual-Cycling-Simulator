@@ -14,6 +14,9 @@ The method of this research can be used in other motions, for instance, running,
 
 For more detail of how these model be created, please look at the Wiki of this project.
 
+# Demo
+
+[![Demo Doccou alpha](https://github.com/HuaweiWang/Virtual-Cycling-Simulator/blob/master/pics/optimize3_result_annimation.gif)](https://youtu.be/zvIn8QWE_BI)
 
 # Dependencies
 ===========
