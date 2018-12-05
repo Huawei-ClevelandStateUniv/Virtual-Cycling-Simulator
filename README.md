@@ -12,7 +12,7 @@ The method of this research can be used in other motions, for instance, running,
 - Cycling model is created in python language
 - Direct collocaiton format optimization structure code is provided
 
-For more detail of how these model be created, please look at the Wiki of this project.
+For more detail of how these model be created, please look at the [Wiki](https://github.com/HuaweiWang/Virtual-Cycling-Simulator/wiki) of this project.
 
 # Demo
 
