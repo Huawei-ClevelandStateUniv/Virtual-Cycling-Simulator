@@ -1,7 +1,7 @@
 Manually compile IPOPT and Cyipopt (On Ubuntu 18.04, python 2.7.15)
 -------------------------------------
 
-Before start, make sure the pip is installed. If not, please install it.
+Before start, make sure ``pip`` is installed. If not, please install it.
 
     ``sudo apt install python-pip``
 
@@ -10,16 +10,16 @@ Then use ``pip`` install the following packages:
     $ pip2 install pkgconfig numpy scipy cython six future wget
     
     
-* Compile Ipopt
+1. Compile Ipopt
 
-1. Download ipopt source code, choose the verison that you would like to have from this page <https://www.coin-or.org/download/source/Ipopt/>.
+* Download ipopt source code, choose the verison that you would like to have from this page <https://www.coin-or.org/download/source/Ipopt/>.
 Here I choiced ``Ipopt-12.11``
 
 Extract ipopt and put it at the floder you want (I put it at home dictionary).
 
 Create the Ipopt directionary: ``export IPOPTDIR=/home/huawei/Ipopt-3.12.11``
 
-2. Download the ThirdParty dependicies using ``wget``::
+* Download the ThirdParty dependicies using ``wget``::
 
     cd $IPOPTDIR/ThirdParty/Blas
     ./get.Blas
@@ -34,7 +34,7 @@ academic license is free.
 Extract HSL source code after you get it. Rename the extracted file to ``coinhsl`` and copy it in the HSL folder inside Ipopt-
 3.12.11/ThirdParty/HSL.
 
-3. Install Ipopt using ``./configure, make, make install`` commands::
+* Install Ipopt using ``./configure, make, make install`` commands::
 
     $ cd $IPOPTDIR/build 
     $ IPOPTDIR/configure --prefix=/opt/ipopt/
@@ -45,7 +45,7 @@ Extract HSL source code after you get it. Rename the extracted file to ``coinhsl
 I used ipopt documents as reference, and it descriped the process in a very detail way. 
 If you got errors in this process, please check it <https://www.coin-or.org/Ipopt/documentation/node14.html>
 
-4. Set environment path::
+* Set environment path::
 
     $ export IPOPTPATH="/home/huawei/Ipopt-3.12.11/build" # make sure this one starts with root path
     $ export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$IPOPTPATH/lib/pkgconfig 
@@ -53,7 +53,7 @@ If you got errors in this process, please check it <https://www.coin-or.org/Ipop
 
 Get help from this web-page if you got errors in setting environments. <https://stackoverflow.com/questions/13428910/how-to-set-the-environmental-variable-ld-library-path-in-linux>
 
-5. check that everything linked correctly with ``ldd`` ::
+* check that everything linked correctly with ``ldd`` ::
 
     $ ldd build/lib.linux-x86_64-2.7/cyipopt.so
     linux-vdso.so.1 (0x00007ffe895e1000)
@@ -72,7 +72,7 @@ Get help from this web-page if you got errors in setting environments. <https://
     libgfortran.so.4 => /usr/lib/x86_64-linux-gnu/libgfortran.so.4 (0x00007f74ed4eb000)
 
 
-* Compile cyipopt
+2. Compile cyipopt
 
 Download ``cyipopt`` source code from this github: <https://github.com/matthias-k/cyipopt>
 
