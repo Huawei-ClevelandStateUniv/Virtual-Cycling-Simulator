@@ -10,17 +10,17 @@ Then use ``pip`` install the following packages:
     $ pip2 install pkgconfig numpy scipy cython six future wget
     
     
-1. Compile Ipopt
+* Compile Ipopt
 
-* Download ipopt source code, choose the verison that you would like to have from this page <https://www.coin-or.org/download/source/Ipopt/>.
+1. Download ipopt source code, choose the verison that you would like to have from this page <https://www.coin-or.org/download/source/Ipopt/>.
 
-Here I used ``Ipopt-12.11``
+Here I used ``Ipopt-3.12.11``
 
-Extract ipopt and put it at the floder you want (I put it at home dictionary).
+Extract ipopt and put it in the floder you want (I put it at ``Home`` folder).
 
-Create the Ipopt directionary: ``export IPOPTDIR=/home/huawei/Ipopt-3.12.11``
+Create the Ipopt directory: ``export IPOPTDIR=/home/huawei/Ipopt-3.12.11``
 
-* Download the ThirdParty dependicies using ``wget``::
+2. Download external packages using ``wget``::
 
     cd $IPOPTDIR/ThirdParty/Blas
     ./get.Blas
@@ -29,32 +29,40 @@ Create the Ipopt directionary: ``export IPOPTDIR=/home/huawei/Ipopt-3.12.11``
     cd ../Mumps && ./get.Mumps
     cd ../Metis && ./get.Metis
 
-To use ``ma27, ma57, ma86`` solvers, HSL source are needed. HSL can be get from HSL official website <http://www.hsl.rl.ac.uk/ipopt/>, 
-academic license is free.
+To use ``ma27, ma57, ma86`` solvers, ``HSL`` package are needed. ``HSL`` can be get from its official website <http://www.hsl.rl.ac.uk/ipopt/>, academic license is free.
 
-Extract HSL source code after you get it. Rename the extracted file to ``coinhsl`` and copy it in the HSL folder inside Ipopt-
-3.12.11/ThirdParty/HSL.
+Extract ''HSL'' source code after you get it. Rename the extracted folder to ``coinhsl`` and copy it in the HSL folder: ``Ipopt-3.12.11/ThirdParty/HSL``
 
-* Install Ipopt using ``./configure, make, make install`` commands::
-
+3. Install Ipopt using ``./configure, make, make install`` commands::
+    
+    $ mkdir $IPOPTDIR/build
     $ cd $IPOPTDIR/build 
-    $ IPOPTDIR/configure --prefix=/opt/ipopt/
+    $ IPOPTDIR/configure
     $ make 
     $ make test 
     $ make install
 
-I used ipopt documents as reference, and it descriped the process in a very detail way. 
-If you got errors in this process, please check it <https://www.coin-or.org/Ipopt/documentation/node14.html>
+I used the ipopt document as reference, and it descrips the compile process in a very detail way. 
+If you get errors in this process, please check it <https://www.coin-or.org/Ipopt/documentation/node14.html>
 
-* Set environment path::
+4. Set environment path::
 
-    $ export IPOPTPATH="/home/huawei/Ipopt-3.12.11/build" # make sure this one starts with root path
+    $ export IPOPTPATH="/home/huawei/Ipopt-3.12.11/build" # make sure this one starts with the Home path
     $ export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:$IPOPTPATH/lib/pkgconfig 
     $ export PATH=$PATH:$IPOPTPATH/bin
 
-Get help from this web-page if you got errors in setting environments. <https://stackoverflow.com/questions/13428910/how-to-set-the-environmental-variable-ld-library-path-in-linux>
+Get help from this web-page if you get errors in setting environments. <https://stackoverflow.com/questions/13428910/how-to-set-the-environmental-variable-ld-library-path-in-linux>
 
-* check that everything linked correctly with ``ldd`` ::
+
+2. Compile cyipopt
+
+1. Download ``cyipopt`` source code from this github: <https://github.com/matthias-k/cyipopt>
+
+Extract cyipopt and put it at the place you want (I put it at Home directory).
+
+Change the path of terminal to cyipopt: ``cd ~/cyipopt``
+
+2. check that everything linked correctly with ``ldd`` ::
 
     $ ldd build/lib.linux-x86_64-2.7/cyipopt.so
     linux-vdso.so.1 (0x00007ffe895e1000)
@@ -73,15 +81,7 @@ Get help from this web-page if you got errors in setting environments. <https://
     libgfortran.so.4 => /usr/lib/x86_64-linux-gnu/libgfortran.so.4 (0x00007f74ed4eb000)
 
 
-2. Compile cyipopt
-
-Download ``cyipopt`` source code from this github: <https://github.com/matthias-k/cyipopt>
-
-Extract cyipopt and put it at the place you want (I put it at my home dictionary).
-
-Change the path of terminal to cyipopt: ``cd ~/cyipopt``
-
-Compile cyipopt using the command: ``python setup.py install``
+3. Compile cyipopt using the command: ``python setup.py install``
 
 If there is no error, then you have compiled ``cyipopt`` succefully 
 
@@ -93,7 +93,7 @@ To make this path works for all terminal, it can be added to ``.bashrc`` ::
 
     $ echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/your/custom/path/' >> ~/.bashrc
 
-Now, you can run the test code::
+4. Now, you can run the test code::
 
     $ cd test
     $ python -c "import ipopt"
