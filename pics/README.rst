@@ -54,7 +54,7 @@ If you get errors in this process, please check it <https://www.coin-or.org/Ipop
 Get help from this web-page if you get errors in setting environments. <https://stackoverflow.com/questions/13428910/how-to-set-the-environmental-variable-ld-library-path-in-linux>
 
 
-2. Compile cyipopt
+* Compile cyipopt
 
 1. Download ``cyipopt`` source code from this github: <https://github.com/matthias-k/cyipopt>
 
@@ -83,7 +83,7 @@ Change the path of terminal to cyipopt: ``cd ~/cyipopt``
 
 3. Compile cyipopt using the command: ``python setup.py install``
 
-If there is no error, then you have compiled ``cyipopt`` succefully 
+If there is no error, then you have compiled ``cyipopt`` successfully 
 
 Before try the test code, add Ipopt ``lib`` path to ``LD_LIBRARY_PATH``::
 
@@ -91,7 +91,7 @@ Before try the test code, add Ipopt ``lib`` path to ``LD_LIBRARY_PATH``::
 
 To make this path works for all terminal, it can be added to ``.bashrc`` ::
 
-    $ echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/your/custom/path/' >> ~/.bashrc
+    $ echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/huawei/Ipopt-3.12.11/build/lib' >> ~/.bashrc
 
 4. Now, you can run the test code::
 
