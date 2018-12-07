@@ -27,7 +27,7 @@ For more detail of how these model be created, please look at the [Wiki](https:/
 - cython >= 0.28.2
 - matplotlib >= 2.2.2
 - ipopt
-- pyipopt
+- [cyipopt](https://github.com/matthias-k/cyipopt)
 
 # Usage
 
@@ -35,3 +35,6 @@ There are two ways of using this simulator: forward simulation and trajectory op
 
 Both of these two ways are included in example. Please check the README in the examples folder.
 
+# Conditions of use
+
+cyipopt is open-source code released under the [EPL] (https://www.eclipse.org/legal/epl-v10.html) license.
