@@ -37,4 +37,4 @@ Both of these two ways are included in example. Please check the README in the e
 
 # Conditions of use
 
-cyipopt is open-source code released under the [EPL] (https://www.eclipse.org/legal/epl-v10.html) license.
+cyipopt is open-source code released under the [EPL](https://www.eclipse.org/legal/epl-v10.html) license.
