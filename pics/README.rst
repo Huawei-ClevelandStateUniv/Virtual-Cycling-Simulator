@@ -13,7 +13,8 @@ Then use ``pip`` install the following packages:
 1. Compile Ipopt
 
 * Download ipopt source code, choose the verison that you would like to have from this page <https://www.coin-or.org/download/source/Ipopt/>.
-Here I choiced ``Ipopt-12.11``
+
+Here I used ``Ipopt-12.11``
 
 Extract ipopt and put it at the floder you want (I put it at home dictionary).
 
