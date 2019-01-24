@@ -1,15 +1,15 @@
 # Introduction
 
-''Virtual-Cycling-Simulator'' is a project to simulate virtual cycling environment. 
+''Virtual-Cycling-Simulator'' is a project to simulate virtual cycling force field. 
 With the simulator, cycling can be done using an exoskeleton instead of a cycling machine. 
-The goal of the virtual cycling simulator is to calcualte the torques which hip/knee joints need to overcome at different cycling speed and loads.
+The goal of the virtual cycling simulator is to calcualte the torques which hip/knee joints need to overcome at different cycling speed and loads. In other words, this simulator could calcuate the joint level force field environment for cycling movement.
 The method of this research can be used in other motions, for instance, running, walking, and even jumpping. 
 
 # Features
 
-- A human dynamics model, exoskeleton dynamics model, as well as a bicycle dynamcis model is created. 
-- human model and exoskeleton model are created and wrote in C code verison using ''SymPy'' and ''Pydy''
-- Cycling model is created in python language
+- A human dynamics model, exoskeleton dynamics model, as well as a bicycle dynamcis model are created. 
+- Human model and exoskeleton model are created and write into C code using ''SymPy'' and ''Pydy'' packages
+- Cycling model is created using python language
 - Direct collocaiton format optimization structure code is provided
 
 For more detail of how these model be created, please look at the [Wiki](https://github.com/HuaweiWang/Virtual-Cycling-Simulator/wiki) of this project.
