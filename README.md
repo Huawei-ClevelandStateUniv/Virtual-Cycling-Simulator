@@ -2,7 +2,7 @@
 
 ''Virtual-Cycling-Simulator'' is a project to simulate virtual cycling force field. 
 With the simulator, cycling can be done using an exoskeleton instead of a cycling machine. 
-The goal of the virtual cycling simulator is to calcualte the torques which hip/knee joints need to overcome at different cycling speed and loads. In other words, this simulator could calcuate the joint level force field environment for cycling movement.
+The goal of the virtual cycling simulator is to calcualte the torques which hip/knee joints need to overcome at different cycling speed and loads. In other words, this simulator could calculate the joint level force (torque) field for cycling motion.
 The method of this research can be used in other motions, for instance, running, walking, and even jumpping. 
 
 # Features
